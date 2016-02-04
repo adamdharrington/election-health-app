@@ -59,15 +59,9 @@
 		  for (i=0; i<array.length; i+=1){
 			  if(!array[i].constituency) continue;
 			  co = array[i].constituency.slug;
-			  ca = {
-				  id: makeId(array[i]),
-				  info: array[i]
-			  }
-			  if (_constituencies[co])_constituencies[co][ca.id] = ca.info;
-			  else {
-				  _constituencies[co] = {};
-				  _constituencies[co][ca.id] = ca.info;
-			  }
+			  array[i].cid = makeId(array[i]);
+			  if (_constituencies[co])_constituencies[co].push(array[i]);
+			  else _constituencies[co] = [array[i]];
 		  }
 		  candidates = _constituencies;
 		  return _constituencies;

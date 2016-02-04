@@ -3,7 +3,7 @@ define(['jquery', 'vendor/mustache.min','text!views/irish_constituencies.html'],
 	
 	(function(){
 
-		$('#health-app').html(Mustache.render(svg));
+		$('#health-app').find('.map').html(Mustache.render(svg));
 
 		console.log('hello');
 	})();

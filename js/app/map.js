@@ -1,4 +1,4 @@
-define(['data-service', 'jquery'],function(data, $){
+define(['data-service', 'jquery', 'vendor/mustache.min', 'text!views/candidates.mustache'],function(data, $, Mustache, template){
 	var constituencyCandidates;
 	Array.prototype.findByName = function(name){
 		if(!this.length)return null;
@@ -22,5 +22,8 @@ define(['data-service', 'jquery'],function(data, $){
 	$('svg').on('click','path',function(){
 		var _constituency = this.id;
 		console.log(constituencyCandidates[_constituency]);
+		$('#health-app').find('.candidates').html(
+			Mustache.render(template, {candidates: constituencyCandidates[_constituency]})
+		);
 	})
 });

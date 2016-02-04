@@ -1,0 +1,9 @@
+{
+  "name": "uplift-health-app",
+  "version": "0.1.1",
+  "repository": "https://github.com/adamdharrington/election-health-app",
+  "devDependencies": {
+    "grunt": "",
+    "grunt-contrib-sass": ""
+  }
+}
