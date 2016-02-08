@@ -1,11 +1,20 @@
 <div id="candidate-list">
+<h1>Candidates for {{ constituency }}</h1>
 {{#candidates}}
     <div class="candidate {{cid}}" data-candidate="{{cid}}">
         <div class="candidate--image">
-
+            <div class="candidate--image--holder"><img
+                    src="img/default-image.png" {{#photo_url}}data-src="{{photo_url}}"{{/photo_url}} alt="Candidate image"
+                /></div>
         </div>
         <div class="candidate--info">
-            <p>{{first_name}} {{last_name}}
+            <dl>
+                <dt>Name:</dt><dd>{{first_name}} {{last_name}}</dd>
+                <dt>Party:</dt><dd>{{party.name}}</dd>
+                <dt>Current TD:</dt><dd>{{#current_td}}Yep{{/current_td}}{{^current_td}}No{{/current_td}}</dd>
+                <dt>Constituency:</dt><dd>{{constituency.name}}</dd>
+            </dl>
+            {{#healthResponse}}Support: {{support}}{{/healthResponse}}
         </div>
     </div>
 {{/candidates}}

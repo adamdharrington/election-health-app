@@ -1,8 +1,28 @@
-svg path:hover {
-    fill: #565656;
-}
 svg path {
     cursor: pointer;
     transition: all .3s ease;
     fill: #ccc;
+    &:hover {
+    	fill: #565656;
+	}
+}
+.svg--selected{
+	fill: #565656;
+}
+
+
+#dublin-constituencies{
+	opacity: 1;
+	transition: all .4s ease;
+	&.svg--show {
+	  animation: slideInRight 0.4s both ease-in-out;
+	}
+	&.svg--hidden {
+	  opacity: 0;
+	}
+}
+
+@keyframes slideInRight {
+  from    { transform: scale(.7) translateX(100%); }
+  to      { transform: scale(1.5) translateX(-122%); }
 }

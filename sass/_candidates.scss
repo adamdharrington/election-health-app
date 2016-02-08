@@ -1,0 +1,48 @@
+
+.candidate{
+  display: inline-block;
+  width: 49%;
+  border: 1px solid #eee;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
+}
+$image-width: 112px;
+.candidate--image{
+  width: $image-width;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: inline-block;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.candidate--info{
+  display: inline-block;
+  position: relative;
+  width: calc(100% - 120px);
+  dl{
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+  }
+  dd,dt{
+    text-align: right;
+    margin: 0 0 0 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 6em;
+    box-sizing: border-box;
+    padding: 0 2px;  }
+  dd{
+    font-weight: 900;
+    text-align: left;
+    width: calc(100% - 6em);
+  }
+  dt{
+
+  }
+}
