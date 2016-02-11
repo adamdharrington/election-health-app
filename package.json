@@ -4,7 +4,10 @@
   "repository": "https://github.com/adamdharrington/election-health-app",
   "devDependencies": {
     "grunt": "",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-sass": "",
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "rjs-build-analysis": "0.0.3"
   }
 }

@@ -1,11 +1,9 @@
-define(['jquery', 'vendor/mustache.min','text!views/irish_constituencies.html'],
-		function ($,Mustache, svg) {
+define(['jquery', 'vendor/mustache.min','text!views/irish_constituencies.html', 'map'],
+		function ($,Mustache, svg, map) {
 	
 	(function(){
 		$('#health-app').find('.map').html(Mustache.render(svg));
+		map.init();
 	})();
 
-	require(['map'],function(m){
-		
-	});
 });

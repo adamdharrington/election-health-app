@@ -1,10 +1,23 @@
-#candidate-list {
-  text-align: left;
+#health-app {
+  /*
+
+  Some of these styles are overrides for elements that should
+  not be present in most implementations
+
+  */
+  background-color: #ffffff;
   font-size: 14px;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
-  div {
-    position: relative;
-    vertical-align: top;
-    box-sizing: border-box;
+  h1, h2,h3{
+    color: #444;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  }
+  #candidate-list {
+    text-align: left;
+    div {
+      position: relative;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
   }
 }

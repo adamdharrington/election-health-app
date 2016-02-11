@@ -1,3 +1,20 @@
+.map{
+	text-align: center;
+}
+.county-name{
+	opacity: 0;
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+	color: #565656;
+	font-size: 1.2rem;
+	position: absolute;
+	padding: .5em;
+	border-radius: 4px;
+	transition: opacity .3s linear;
+	&.show{
+		opacity: 1;
+	}
+}
 svg path {
     cursor: pointer;
     transition: all .3s ease;
