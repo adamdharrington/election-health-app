@@ -37,17 +37,27 @@
   }
 }
 .candidate{
-  display: inline-block;
-  width: 49%;
+  display: block;
   border: 1px solid #eee;
   margin: 2px;
   padding: 5px;
   border-radius: 5px;
+  @media (min-width: 700px) {
+    display: inline-block;
+    width: 49%;
+  }
   .comment{
     font-size: 1.5em;
     margin: 10px 20px;
     font-style: oblique;
     color: #444;
+  }
+  a{
+    color: #0d3349;
+    text-decoration: none;
+    &:hover{
+
+    }
   }
 }
 $image-width: 112px;
@@ -57,16 +67,23 @@ $image-width: 112px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  display: inline-block;
+  display: block;
+  text-align: center;
+  @media (min-width: 700px) {
+    display: inline-block;
+  }
   img{
     width: 100%;
     height: auto;
   }
 }
 .candidate--info{
-  display: inline-block;
+  display: block;
   position: relative;
-  width: calc(100% - 120px);
+  @media (min-width: 700px) {
+    width: calc(100% - 120px);
+    display: inline-block;
+  }
   dl{
     position: relative;
     margin: 0;
@@ -77,13 +94,13 @@ $image-width: 112px;
     margin: 0 0 0 0;
     display: inline-block;
     vertical-align: top;
-    width: 6em;
+    width: 50%;
     box-sizing: border-box;
     padding: 0 2px;  }
   dd{
     font-weight: 900;
     text-align: left;
-    width: calc(100% - 6em);
+    width: 50%;
   }
   dt{
 
