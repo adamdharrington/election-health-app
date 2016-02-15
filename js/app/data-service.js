@@ -52,7 +52,7 @@
 	  
   };
   var getCandidates = new DataService(candidates
-			,"http://irish-elections.storyful.com/candidates.json"
+			,"//irish-elections.storyful.com/candidates.json"
 			,function(array){
 		  var i, co,ca, _constituencies = {},
 			makeId = function(cand){
