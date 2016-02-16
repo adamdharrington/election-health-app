@@ -1,6 +1,7 @@
 define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'text!views/candidates.mustache'],
 		function(data, safeFetch, Mustache, template){
-	var constituencyCandidates, constituencies, activeConstituency, responses;
+			var $ = window.jQuery;
+			var constituencyCandidates, constituencies, activeConstituency, responses;
 	Array.prototype.findByName = function(name){
 		if(!this.length)return null;
 		return this.filter(function(o){
