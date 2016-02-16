@@ -1,4 +1,4 @@
-define(['jquery'],function($){
+define([],function(){
 	var constituencies = [{name:'dublin'},{name:'leitrim'}], candidateResponses;
   function getConstituencies(callback){
 	  if(constituencies) callback(constituencies);

@@ -5,7 +5,7 @@ requirejs.config({
 	baseUrl : "./js/app",
 	paths   : {
 		vendor : "./../vendor",
-		jquery : "./../vendor/jquery-1.10.2.min",
+		jquery : "empty:",
 		views  : "./../../templates"
 	},
 	shim: {

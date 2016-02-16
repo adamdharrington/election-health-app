@@ -1,5 +1,5 @@
-define(['jquery'],
-		function ($) {
+define([],
+		function () {
 			var safeGet = function($elem, callback){
 				$.get($elem.data('src')).success(function(){
 					callback($elem, $elem.data('src'));
