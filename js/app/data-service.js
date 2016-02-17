@@ -83,7 +83,7 @@
 				returnObj[entries[i].gsx$candidateid['$t']] = {
 					cid : entries[i].gsx$candidateid['$t'],
 					name: entries[i].gsx$candidatename['$t'],
-					support : entries[i].gsx$doyousupportthecontentsoftheuplifthealthcharter['$t'],
+					support : entries[i].gsx$doyousupportthecontentsofthepeopleshealthcarecharter['$t'],
 					comment : entries[i].gsx$optionaladdacomment['$t']
 				}
 			}
