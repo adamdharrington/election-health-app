@@ -77,7 +77,7 @@
   var formatCandidateResponses = function(data){
 		// Try return responses in format expected
 		var returnObj = {};
-		if(data && data.hasOwnProperty('feed') && data.feed.hasOwnProperty('entries')){
+		if(data && data.hasOwnProperty('feed') && data.feed.hasOwnProperty('entry')){
 			var entries = data.feed.entry, len = entries.length;
 			for (var i = 0; i<len;i+=1){
 				returnObj[entries[i].gsx$candidateid['$t']] = {
