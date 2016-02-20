@@ -18,9 +18,9 @@
                     <dt>Party:</dt><dd>{{party.name}}</dd>
                     <dt>Current TD:</dt><dd>{{#current_td}}Yep{{/current_td}}{{^current_td}}No{{/current_td}}</dd>
                     <dt>Constituency:</dt><dd>{{constituency.name}}</dd>
-                    {{#twitter_url}}<dt>Twitter:</dt><dd><a href="{{twitter_url}}" target="_blank">@Tweet</a></dd>{{/twitter_url}}
+                    {{#tweet}}<dt>Ask with Twitter:</dt><dd><a href="{{tweet}}" target="_blank">@Tweet</a></dd>{{/tweet}}
                 </dl>
-                {{#healthResponse}}<p class="comment">‟{{comment}}”</p>{{/healthResponse}}
+                {{#healthResponse}}{{#comment}}<p class="comment">‟{{comment}}”</p>{{/comment}}{{/healthResponse}}
             </div>
         </div>
         {{/candidates}}

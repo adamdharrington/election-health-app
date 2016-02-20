@@ -1,5 +1,5 @@
-define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'text!views/candidates.mustache'],
-		function(data, safeFetch, Mustache, template){
+define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'screen-reader', 'text!views/candidates.mustache'],
+		function(data, safeFetch, Mustache, sr, template){
 			var $ = window.jQuery;
 			var constituencyCandidates, constituencies, activeConstituency, responses;
 	Array.prototype.findByName = function(name){
@@ -21,6 +21,7 @@ define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'text!views/candida
 	function initiate() {
 		data.constituencies(function (d) {
 			window.constituencies = constituencies = d;
+			sr.init(d);
 		});
 		data.responses(function (d) {
 			responses = d;
@@ -82,6 +83,8 @@ define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'text!views/candida
 					? d.attr('class', 'svg--show')
 					: d.attr('class', 'svg--hidden');
 		});
+
+
 
 	}
 	return{
