@@ -1,5 +1,5 @@
-define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'screen-reader', 'text!views/candidates.mustache'],
-		function(data, safeFetch, Mustache, sr, template){
+define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'screen-reader', 'text!views/candidates.mustache', 'history'],
+		function(data, safeFetch, Mustache, sr, template, history){
 			var $ = window.jQuery;
 			var constituencyCandidates, constituencies, activeConstituency, responses;
 	Array.prototype.findByName = function(name){
@@ -16,6 +16,13 @@ define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'screen-reader', 't
 		});
 		return vals.filter(function(i){return i !== null;});
 	};
+
+  function jumpToConstituency(){
+    var query = history.readQuery();
+    if (query.hasOwnProperty('constituency')){
+      $('.map').find('path#'+query.constituency).trigger('click');
+    }
+  }
 
 
 	function initiate() {
@@ -84,6 +91,9 @@ define(['data-service', 'safe-fetch', 'vendor/mustache.min', 'screen-reader', 't
 					: d.attr('class', 'svg--hidden');
 		});
 
+    window.setTimeout(function(){
+      jumpToConstituency();
+    }, 1500);
 
 
 	}
